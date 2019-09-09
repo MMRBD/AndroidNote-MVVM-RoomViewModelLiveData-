@@ -1,22 +1,21 @@
-package com.example.architectureexample;
+package com.example.architectureexample.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
-import java.util.ArrayList;
-import java.util.List;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.architectureexample.R;
+import com.example.architectureexample.model.Note;
+
 public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
     private onItemClickListener listener;
 
-    protected NoteAdapter() {
+    public NoteAdapter() {
         super(DIFF_CALLBACK);
     }
 
@@ -47,8 +46,6 @@ public class NoteAdapter extends ListAdapter<Note, NoteAdapter.NoteHolder> {
         holder.tvDescription.setText(currentNote.getDescription());
         holder.tvPriority.setText(String.valueOf(currentNote.getPriority()));
     }
-
-
 
     public Note getNoteAt(int position) {
         return getItem(position);

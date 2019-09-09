@@ -1,4 +1,4 @@
-package com.example.architectureexample;
+package com.example.architectureexample.viewmodel;
 
 import android.app.Application;
 
@@ -7,6 +7,9 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
+
+import com.example.architectureexample.repository.NoteRepository;
+import com.example.architectureexample.model.Note;
 
 public class NoteViewModel extends AndroidViewModel {
     private NoteRepository repository;

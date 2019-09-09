@@ -1,4 +1,4 @@
-package com.example.architectureexample;
+package com.example.architectureexample.repository;
 
 import android.app.Application;
 import android.os.AsyncTask;
@@ -6,6 +6,10 @@ import android.os.AsyncTask;
 import java.util.List;
 
 import androidx.lifecycle.LiveData;
+
+import com.example.architectureexample.dao.NoteDao;
+import com.example.architectureexample.db.NoteDatabase;
+import com.example.architectureexample.model.Note;
 
 public class NoteRepository {
     private NoteDao noteDao;

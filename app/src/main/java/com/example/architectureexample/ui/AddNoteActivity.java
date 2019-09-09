@@ -1,4 +1,4 @@
-package com.example.architectureexample;
+package com.example.architectureexample.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,8 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.Toast;
+
+import com.example.architectureexample.R;
 
 public class AddNoteActivity extends AppCompatActivity {
 

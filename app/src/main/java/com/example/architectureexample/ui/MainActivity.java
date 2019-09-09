@@ -1,4 +1,4 @@
-package com.example.architectureexample;
+package com.example.architectureexample.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.architectureexample.model.Note;
+import com.example.architectureexample.adapter.NoteAdapter;
+import com.example.architectureexample.viewmodel.NoteViewModel;
+import com.example.architectureexample.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -15,16 +19,15 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import static com.example.architectureexample.AddNoteActivity.EXTRA_DESCRIPTION;
-import static com.example.architectureexample.AddNoteActivity.EXTRA_PRIORITY;
-import static com.example.architectureexample.AddNoteActivity.EXTRA_TITLE;
+import static com.example.architectureexample.ui.AddNoteActivity.EXTRA_DESCRIPTION;
+import static com.example.architectureexample.ui.AddNoteActivity.EXTRA_PRIORITY;
+import static com.example.architectureexample.ui.AddNoteActivity.EXTRA_TITLE;
 
 public class MainActivity extends AppCompatActivity {
 
